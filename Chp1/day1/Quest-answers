@@ -1,0 +1,9 @@
+Q: Explain what the Blockchain is in your own words
+A: The Blockchain is a distributed ledger / database (runs on multiple nodes, not one centralised server) that allows you to interact with and store data
+
+Q: Explain what a Smart Contract is
+A: A smart contract are programs stored on the blockchain, they automate the execution of an agreement between multiple parties when certain conditions are met.
+
+q: Explain the difference between a script and a transaction.
+A: A script reads information from the blockchain (does not alter it), a transaction changes information on the blockchain usually by calling a function requires payment
+
