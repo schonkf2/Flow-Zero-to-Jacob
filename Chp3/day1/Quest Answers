@@ -1,0 +1,31 @@
+Q: In words, list 3 reasons why structs are different from resources.
+A: Structs can be copied resources cannot
+   Structs can be overwritten resources cannot 
+   Structs can be created whenever you want resources cannot (only inside the contract)
+   
+
+Q: Describe a situation where a resource might be better to use than a struct.
+A: If you want to store / transfer a valuable piece of data then a resource is the mose secure way of storing it
+
+Q: What is the keyword to make a new resource?
+A: "Create"
+
+Q: Can a resource be created in a script or transaction (assuming there isn't a public function to create one)?
+A: No
+
+Q: What is the type of the resource below?
+A: Resource?
+
+I Spy errors: 
+
+ pub fun createJacob(): Jacob { // there is 1 here
+        let myJacob = Jacob() // there are 2 here
+        return myJacob // there is 1 here
+    }
+    
+Should be :
+
+  pub fun createJacob(): @Jacob { // addition of @
+  let myJacob <- create Jacob() // addition of <- + create
+  return <- myJacob // addition of <-
+  }
