@@ -1,0 +1,5 @@
+import Authentication from 0x02
+
+pub fun main(account: Address): Authentication.Info {
+    return Authentication.profiles[account]!
+}
