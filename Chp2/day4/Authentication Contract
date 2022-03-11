@@ -1,0 +1,31 @@
+pub contract Authentication {
+
+    pub var profiles: {Address: Info}
+    
+    pub struct Info {
+        pub let firstName: String
+        pub let lastName: String
+        pub let height: Int
+        pub let bmi: Int
+        pub let account: Address
+
+        // You have to pass in 4 arguments when creating this Struct.
+        init(_firstName: String, _lastName: String, _height: Int, _bmi: Int, _account: Address) {
+            self.firstName = _firstName
+            self.lastName = _lastName
+            self.height = _height
+            self.bmi = _bmi
+            self.account = _account
+        }
+    }
+
+    pub fun addProfile(firstName: String, lastName: String, height: Int, bmi: Int, account: Address) {
+        let newProfile = Info(_firstName: firstName, _lastName: lastName, _height: height, _bmi: bmi, _account: account)
+        self.profiles[account] = newProfile
+    }
+
+    init() {
+        self.profiles = {}
+    }
+
+}
