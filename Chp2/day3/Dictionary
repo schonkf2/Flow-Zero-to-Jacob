@@ -1,0 +1,5 @@
+pub fun main() {
+
+var socialRankings: {String: UInt64} = {"Facebook": 1, "Instagram": 2, "Twitter", "YouTube": 3, "Reddit": 4, "LinkedIn": 5}
+
+}
