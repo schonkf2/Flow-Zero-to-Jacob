@@ -1,0 +1,11 @@
+import Authentication from 0x02
+
+transaction(firstName: String, lastName: String, height: Int, bmi: Int, account: Address) {
+
+    prepare(signer: AuthAccount) {}
+
+    execute {
+        Authentication.addInfo(firstName: firstName, lastName: lastName, height: height, bmi: bmi, account: account)
+        log("Ur Done, Ur Done")
+    }
+}
