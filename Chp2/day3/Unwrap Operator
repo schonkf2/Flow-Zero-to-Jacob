@@ -1,0 +1,6 @@
+1) The force-unwrap operator (!) returns the value inside an optional if it contains a value, or panics and aborts the execution if the optional has no value, i.e., the optional value is nil.
+
+2) pub fun main(): String {
+    let thing: {String: String} = {"Hi": "Ni hao", "Bonjour": "Dia Duit", "Hola": "Good evening"}
+    return thing["Bonjour"]!
+}
